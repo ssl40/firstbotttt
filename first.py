@@ -10,8 +10,8 @@ def send_echo (message):
 	w = observation.get_weather ()
 	temp = w.get_temperature ('celsius')["temp"]
 
-	answer = Привет!
-	answer += str(temp)
+	answer = "Привет!"
+	answer += "str(temp)"
 
 	bot.send.message (message.chat.id, answer)
 	
