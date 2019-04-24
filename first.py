@@ -13,6 +13,6 @@ def send_echo (message):
 	answer = Привет!
 	answer += str(temp)
 
-	bot.send.message (message.chat.id, message.text)
+	bot.send.message (message.chat.id, answer)
 	
 bot.polling (none_stop = True)
