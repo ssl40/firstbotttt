@@ -8,9 +8,11 @@ bot = telebot.TeleBot ("805618208:AAEkp0Xat3eP3sFXGysRRU_aHTaBl_GFx7c")
 def send_echo (message):
 	observation = owm.weather_at_place (message.text)
 	w = observation.get_weather ()
-	temp = w.get_temperature ("celsius")["temp"]
+	temp = w.get_temperature ('celsius')["temp"]
 
 	answer = Привет!
 	answer += str(temp)
 
+	bot.send.message (message.chat.id, message.text)
+	
 bot.polling (none_stop = True)
