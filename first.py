@@ -10,7 +10,7 @@ def send_echo (message):
 	w = observation.get_weather ()
 	temp = w.get_temperature ("celsius")["temp"]
 
-	answer = w
+	answer = Привет!
 	answer += str(temp)
 
 bot.polling (none_stop = True)
